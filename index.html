@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SNAKE!</title>
+  </head>
+  <body>
+
+    <script src="./js/jquery-2.1.1.js"></script>
+    <script src="./js/keymaster.js"></script>
+    <script src="./js/snake.js"></script>
+    <script src="./js/snake-view.js"></script>
+    <!-- <script src="./js/bundle.js"></script> -->
+
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+      .container {
+        margin: auto;
+        display: block;
+        width: 600px;
+      }
+      body {
+        margin: auto;
+      }
+      h2 {
+        text-align: center;
+        font-size: 60px;
+        margin: 0;
+        padding: 20px;
+        color: red;
+        font-family: arial;
+      }
+    </style>
+
+
+    <h2>SNAKE! LENGTH: 1</h2>
+    <div class='container'>
+      <canvas id="myCanvas"></canvas>
+    </div>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var ctx = canvas.getContext('2d');
+      canvas.width = 600;
+      canvas.height = 600;
+      canvas.border = 1;
+      var view = new View(new Board(), ctx);
+      view.play();
+      // canvas.height = game.DIM_Y;
+      // canvas.width = game.DIM_X;
+      // var test = new Asteroids.GameView(ctx, game);
+      // test.start();
+    </script>
+  </body>
+</html>
